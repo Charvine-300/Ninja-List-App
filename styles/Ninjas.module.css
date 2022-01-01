@@ -1,0 +1,23 @@
+.single {
+    padding: 2px 16px;
+    background: #fff;
+    display: block;
+    margin: 20px 10px;
+    transition: all 0.5s ease-in-out;
+    border-left: 8px solid #fff;
+}
+
+.mingle {
+    font-weight: lighter;
+}
+
+.header {
+    font-size: 50px;
+}
+
+.single:hover {
+    color: #fff;
+    background-color: #000;
+    transition: all 0.5s ease-in-out;
+    border-left: 8px solid #4979ff;
+}

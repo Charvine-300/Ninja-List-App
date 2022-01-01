@@ -1,0 +1,97 @@
+NEXT JS NOTES
+- Next.JS is a framework for creating pre-rendered React websites.
+This means that the React components are already rendered to HTMl 
+pages before it reaches the browser after request.
+
+- It results in better SEOs becuase the response from the server is 
+a pre-rendered HTML page, this is called Server-Side Rendering.
+
+- It makes the React app more paatable to the web crawlers.
+
+- Routing in Next has been made easier. Next automatically creates a route
+for every component created in the Pages folder.
+
+- It is possible to have subfolders in the Pages folder and Next would still
+create a route for every component created in the subfolders.
+
+- Whenever there's a file named 'index', it creates a root path with it.
+
+- In React, there are components that are reusable and are supposed to display
+on every single page routed to. These components are not stored in the Pages 
+folder of the Next js app. Create a new folder and store said components so that 
+Next js does not automatically create a path for it.
+
+- When linking pages in Next, we import the Link component from 'next/link' and wrap 
+the <a> tags with the <Link> tags.
+
+- The href attribute is placed in the Link tag.
+
+- Next js does Code Splitting by default. This is the process of loading only the 
+JS code needed for the page requested by the client.
+
+-  When a Next app page is loaded, the server-side prefetches all the code for the links
+on the present page so that when the client routes, the code will be ready and waiting 
+for display in the browser.
+
+- There  are component which the programmer would want to be in display
+whatever page is routed to, like in React. This is achieved in Next by 
+creating a Layout file in the folder containing all the other other unchanging
+components and use its tag to wrap the components in the _app.js file.
+
+- The two ways in which styling is done, global.css and css modules.
+
+- The global.css file is already imported into the _app.js file which means
+that every style put in the global file affects every component in the app.
+
+- Individual styling is done with CSS modules.
+
+- CSS modules are created with the .module keyword alongside the module name when 
+naming the file.
+
+- The styles in them are imported in the component the programmer desires to use them.
+The one good thing about it is that if a class is used in many components, they are not 
+actually of the same class and modfications to one will not affect the rest.
+
+- In css modules, all the selectors must be classes.
+
+- Next js has defualt 404 pages. There is no need to link it to anything
+the components for 404s are named '404'. It is a special name, like the 'index' file 
+which tells Next that this is a catch-all, meaning that a non-exisitng url will 
+prompt this page to load like in React.
+
+- Redirecting users in Next is very much the same as in React expect instead of 
+useHistory(), we use the useRouter package that comes with Next.
+
+- useRouter contains all the methods that useHistory does so it is a very slight 
+transition.
+
+- When using images in your Next app, save all the images in the Public folder and they
+will be used in any component by using their names in the src attibute of the image tag.
+
+- In Next v10, there is an Image component that comes with the Next packages that can be used 
+for images in your app. they must be used with width and height attributes.
+
+- It only loads the images when the browser scrolls to the point it is programmed to (laser-loading)
+ show. This helps with optimization for loading speed.
+
+- The Title tag in HTML is used to name the files a user visits. The names are displayed in the tab 
+that shows in a browser. In Next, these names can be changed according to the pages a user visits with
+the help of the Head component in Next.
+
+- It is imported into the component from next an used like a tag.
+
+- When fetching data from an external source, it is imposible to do it in the logic part of a component
+because Next prerenders its code before sending it to the browser.
+
+- The getStaticProps function in Next helps to run asynchronous code but only when the user vists a page that 
+requests it and not before the page is loaded like normal.
+
+- It is written above the SFC of a component, where all the imported files are stated. It is exported insted of 
+imported.
+
+- Creating a component that displays different information, based on which tab is clicked is done by wrapping the
+file name in square brackets so Next understands that this component is a Route Parameter i.e. dynamic path.
+
+- This is necessary because of the pre-rendering nature of Nextjs.
+
+- The getStaticProps helps Next generate routes and html pages for each ids returned in aforementioned function.
