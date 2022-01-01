@@ -4,9 +4,9 @@ const { Readable } = require("stream");
 export default async (req, res) => {
   // An array with your links
   const links = [
-    { url: "/about", changefreq: "daily", priority: 0.3 },
-    { url: "/ninjas/", changefreq: "daily", priority: 0.3 },
-    { url: "/", changefreq: "daily", priority: 0.3 },
+    { url: "/blog/my-first-blog-post/", changefreq: "daily", priority: 0.3 },
+    { url: "/blog/my-second-blog-post", changefreq: "daily", priority: 0.3 },
+    { url: "/blog/my-third-blog-post/", changefreq: "daily", priority: 0.3 },
   ];
 
   // Create a stream to write to

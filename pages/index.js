@@ -8,6 +8,7 @@ export default function Home() {
       <Head>
         <title> Ninja List | Home </title>
         <link rel="icon" href="/favicon.ico"/>
+        <meta prperty="og:image" content="ninja-list.jpeg" />
         <meta property="og:type" content="website" />
 		    <meta property="og:title" content="Ninja List" />
         <meta name="description" content="Listing of Ninjas all around the world, provided with a total breakdown of each member's information" />

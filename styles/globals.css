@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
 
+img {
+  width: 100px;
+  height: 100px;
+}
+
 body {
   background: #f2f2f2;
   color: #333;
