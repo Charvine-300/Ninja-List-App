@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://ninja-list-app-gamma.vercel.app/api/blog-sitemap
